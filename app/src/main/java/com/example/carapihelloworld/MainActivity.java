@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == REQUEST_CODE_ASK_PERMISSIONS) {
             //all permissions have been granted
             if (!Arrays.asList(grantResults).contains(PackageManager.PERMISSION_DENIED)) {
