@@ -1,0 +1,9 @@
+name: 'Build'
+on: [push]
+
+jobs:
+  AndroidApp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Android App
+        uses: sparkfabrik/android-build-action@v1.5.0  
