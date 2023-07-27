@@ -26,8 +26,14 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew build
       
-    - name: Upload APK
+    - name: Upload app-debug.apk 
       uses: actions/upload-artifact@v1
       with:
-        name: apk
-        path: app/build/outputs/apk/debug/app-debug.apk 
+        name: app-debug.apk
+        path: app/build/outputs/apk/debug/app-debug.apk
+        
+    - name: Upload app-release-unsigned.apk
+      uses: actions/upload-artifact@v1
+      with:
+        name: app-release-unsigned.apk
+        path: app/build/outputs/apk/release/app-release-unsigned.apk
